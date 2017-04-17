@@ -1,0 +1,1514 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/satazor/js-spark-md5#readme">spark-md5 (v3.0.0)</a>
+</h1>
+<h4>Lightning fast normal and incremental md5 for javascript</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5">module spark-md5</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.spark-md5">
+            function <span class="apidocSignatureSpan"></span>spark-md5
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer">
+            function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.hash">
+            function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.hash
+            <span class="apidocSignatureSpan">(arr, raw)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype._finish">
+            function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype._finish
+            <span class="apidocSignatureSpan">(tail, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.append">
+            function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype.append
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.destroy">
+            function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype.destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.end">
+            function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype.end
+            <span class="apidocSignatureSpan">(raw)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.getState">
+            function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype.getState
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.reset">
+            function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype.reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.setState">
+            function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype.setState
+            <span class="apidocSignatureSpan">(state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.hash">
+            function <span class="apidocSignatureSpan">spark-md5.</span>hash
+            <span class="apidocSignatureSpan">(str, raw)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.hashBinary">
+            function <span class="apidocSignatureSpan">spark-md5.</span>hashBinary
+            <span class="apidocSignatureSpan">(content, raw)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.toString">
+            function <span class="apidocSignatureSpan">spark-md5.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.ArrayBuffer">module spark-md5.ArrayBuffer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.ArrayBuffer">
+            function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.hash">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.</span>hash
+            <span class="apidocSignatureSpan">(arr, raw)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.ArrayBuffer.hash">module spark-md5.ArrayBuffer.hash</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.hash.hash">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.</span>hash
+            <span class="apidocSignatureSpan">(arr, raw)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype">module spark-md5.ArrayBuffer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype._finish">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>_finish
+            <span class="apidocSignatureSpan">(tail, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.append">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>append
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.destroy">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.end">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>end
+            <span class="apidocSignatureSpan">(raw)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.getState">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>getState
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.reset">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.setState">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>setState
+            <span class="apidocSignatureSpan">(state)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype._finish">module spark-md5.ArrayBuffer.prototype._finish</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype._finish._finish">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>_finish
+            <span class="apidocSignatureSpan">(tail, length)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype.append">module spark-md5.ArrayBuffer.prototype.append</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.append.append">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>append
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype.destroy">module spark-md5.ArrayBuffer.prototype.destroy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.destroy.destroy">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype.end">module spark-md5.ArrayBuffer.prototype.end</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.end.end">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>end
+            <span class="apidocSignatureSpan">(raw)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype.getState">module spark-md5.ArrayBuffer.prototype.getState</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.getState.getState">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>getState
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype.reset">module spark-md5.ArrayBuffer.prototype.reset</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.reset.reset">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype.setState">module spark-md5.ArrayBuffer.prototype.setState</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.ArrayBuffer.prototype.setState.setState">
+            function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>setState
+            <span class="apidocSignatureSpan">(state)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.hash">module spark-md5.hash</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.hash.hash">
+            function <span class="apidocSignatureSpan">spark-md5.</span>hash
+            <span class="apidocSignatureSpan">(str, raw)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.hashBinary">module spark-md5.hashBinary</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.hashBinary.hashBinary">
+            function <span class="apidocSignatureSpan">spark-md5.</span>hashBinary
+            <span class="apidocSignatureSpan">(content, raw)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spark-md5.toString">module spark-md5.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spark-md5.toString.toString">
+            function <span class="apidocSignatureSpan">spark-md5.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5" id="apidoc.module.spark-md5">module spark-md5</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.spark-md5" id="apidoc.element.spark-md5.spark-md5">
+        function <span class="apidocSignatureSpan"></span>spark-md5
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SparkMD5() {
+    // call reset to init the instance
+    this.reset();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer" id="apidoc.element.spark-md5.ArrayBuffer">
+        function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ArrayBuffer = function () {
+    // call reset to init the instance
+    this.reset();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+document.getElementById('file').addEventListener('change', function () {
+var blobSlice = File.prototype.slice || File.prototype.mozSlice || File.prototype.webkitSlice,
+    file = this.files[0],
+    chunkSize = 2097152,                             // Read in chunks of 2MB
+    chunks = Math.ceil(file.size / chunkSize),
+    currentChunk = 0,
+    spark = new SparkMD5.<span class="apidocCodeKeywordSpan">ArrayBuffer</span>(),
+    fileReader = new FileReader();
+
+fileReader.onload = function (e) {
+    console.log('read chunk nr', currentChunk + 1, 'of', chunks);
+    spark.append(e.target.result);                   // Append array buffer
+    currentChunk++;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.hash" id="apidoc.element.spark-md5.ArrayBuffer.hash">
+        function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.hash
+        <span class="apidocSignatureSpan">(arr, raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ArrayBuffer.hash = function (arr, raw) {
+    var hash = md51_array(new Uint8Array(arr)),
+        ret = hex(hash);
+
+    return raw ? hexToBinaryString(ret) : ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Returns an object representing the internal computation state.
+You can pass this state to setState(). This feature is useful to resume an incremental md5.
+
+#### SparkMD5.ArrayBuffer#setState(state)
+
+Sets the internal computation state. See: getState().
+
+#### SparkMD5.<span class="apidocCodeKeywordSpan">ArrayBuffer.hash</span>(arr, raw)
+
+Hashes an array buffer directly, returning the hex result.
+If `raw` is true, the result as a binary string will be returned instead.
+Note that this function is `static`.
+
+
+## License
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype._finish" id="apidoc.element.spark-md5.ArrayBuffer.prototype._finish">
+        function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype._finish
+        <span class="apidocSignatureSpan">(tail, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ArrayBuffer.prototype._finish = function (tail, length) {
+    var i = length,
+        tmp,
+        lo,
+        hi;
+
+    tail[i &gt;&gt; 2] |= 0x80 &lt;&lt; ((i % 4) &lt;&lt; 3);
+    if (i &gt; 55) {
+        md5cycle(this._hash, tail);
+        for (i = 0; i &lt; 16; i += 1) {
+            tail[i] = 0;
+        }
+    }
+
+    // Do the final computation based on the tail and length
+    // Beware that the final length may not fit in 32 bits so we take care of that
+    tmp = this._length * 8;
+    tmp = tmp.toString(16).match(/(.*?)(.{0,8})$/);
+    lo = parseInt(tmp[2], 16);
+    hi = parseInt(tmp[1], 16) || 0;
+
+    tail[14] = lo;
+    tail[15] = hi;
+    md5cycle(this._hash, tail);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.append" id="apidoc.element.spark-md5.ArrayBuffer.prototype.append">
+        function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype.append
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ArrayBuffer.prototype.append = function (arr) {
+    var buff = concatenateArrayBuffers(this._buff.buffer, arr, true),
+        length = buff.length,
+        i;
+
+    this._length += arr.byteLength;
+
+    for (i = 64; i &lt;= length; i += 64) {
+        md5cycle(this._hash, md5blk_array(buff.subarray(i - 64, i)));
+    }
+
+    this._buff = (i - 64) &lt; length ? new Uint8Array(buff.buffer.slice(i - 64)) : new Uint8Array(0);
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.destroy" id="apidoc.element.spark-md5.ArrayBuffer.prototype.destroy">
+        function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype.destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ArrayBuffer.prototype.destroy = function () {
+    delete this._hash;
+    delete this._buff;
+    delete this._length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.end" id="apidoc.element.spark-md5.ArrayBuffer.prototype.end">
+        function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype.end
+        <span class="apidocSignatureSpan">(raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ArrayBuffer.prototype.end = function (raw) {
+    var buff = this._buff,
+        length = buff.length,
+        tail = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        i,
+        ret;
+
+    for (i = 0; i &lt; length; i += 1) {
+        tail[i &gt;&gt; 2] |= buff[i] &lt;&lt; ((i % 4) &lt;&lt; 3);
+    }
+
+    this._finish(tail, length);
+    ret = hex(this._hash);
+
+    if (raw) {
+        ret = hexToBinaryString(ret);
+    }
+
+    this.reset();
+
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.getState" id="apidoc.element.spark-md5.ArrayBuffer.prototype.getState">
+        function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype.getState
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ArrayBuffer.prototype.getState = function () {
+    var state = SparkMD5.prototype.getState.call(this);
+
+    // Convert buffer to a string
+    state.buff = arrayBuffer2Utf8Str(state.buff);
+
+    return state;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.reset" id="apidoc.element.spark-md5.ArrayBuffer.prototype.reset">
+        function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype.reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ArrayBuffer.prototype.reset = function () {
+    this._buff = new Uint8Array(0);
+    this._length = 0;
+    this._hash = [1732584193, -271733879, -1732584194, 271733878];
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.setState" id="apidoc.element.spark-md5.ArrayBuffer.prototype.setState">
+        function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer.prototype.setState
+        <span class="apidocSignatureSpan">(state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ArrayBuffer.prototype.setState = function (state) {
+    // Convert string to buffer
+    state.buff = utf8Str2ArrayBuffer(state.buff, true);
+
+    return SparkMD5.prototype.setState.call(this, state);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.hash" id="apidoc.element.spark-md5.hash">
+        function <span class="apidocSignatureSpan">spark-md5.</span>hash
+        <span class="apidocSignatureSpan">(str, raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hash = function (str, raw) {
+    // Converts the string to utf8 bytes if necessary
+    // Then compute it using the binary function
+    return SparkMD5.hashBinary(toUtf8(str), raw);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+## Usage
+
+### Normal usage
+
+```js
+var hexHash = SparkMD5.<span class="apidocCodeKeywordSpan">hash</span>('Hi there');        // hex hash
+var rawHash = SparkMD5.hash('Hi there', true);  // OR raw hash (binary string)
+```
+
+### Incremental usage
+
+```js
+var spark = new SparkMD5();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.hashBinary" id="apidoc.element.spark-md5.hashBinary">
+        function <span class="apidocSignatureSpan">spark-md5.</span>hashBinary
+        <span class="apidocSignatureSpan">(content, raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hashBinary = function (content, raw) {
+    var hash = md51(content),
+        ret = hex(hash);
+
+    return raw ? hexToBinaryString(ret) : ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#### SparkMD5.hash(str, raw)
+
+Hashes a string directly, returning the hex result.
+If `raw` is true, the result as a binary string will be returned instead.
+Note that this function is `static`.
+
+#### SparkMD5.<span class="apidocCodeKeywordSpan">hashBinary</span>(str, raw)
+
+Hashes a binary string directly (e.g.: string returned from the deprecated [readAsBinaryString](https://developer.mozilla.org/en
+-US/docs/Web/API/FileReader/readAsBinaryString)), returning the hex result.
+If `raw` is true, the result as a binary string will be returned instead.
+Note that this function is `static`.
+
+
+### SparkMD5.ArrayBuffer class
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.toString" id="apidoc.element.spark-md5.toString">
+        function <span class="apidocSignatureSpan">spark-md5.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    for (i = 0; i &lt; 16; i += 1) {
+        tail[i] = 0;
+    }
+}
+
+// Beware that the final length might not fit in 32 bits so we take care of that
+tmp = n * 8;
+tmp = tmp.<span class="apidocCodeKeywordSpan">toString</span>(16).match(/(.*?)(.{0,8})$/);
+lo = parseInt(tmp[2], 16);
+hi = parseInt(tmp[1], 16) || 0;
+
+tail[14] = lo;
+tail[15] = hi;
+
+md5cycle(state, tail);
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.ArrayBuffer" id="apidoc.module.spark-md5.ArrayBuffer">module spark-md5.ArrayBuffer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.ArrayBuffer" id="apidoc.element.spark-md5.ArrayBuffer.ArrayBuffer">
+        function <span class="apidocSignatureSpan">spark-md5.</span>ArrayBuffer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ArrayBuffer = function () {
+    // call reset to init the instance
+    this.reset();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+document.getElementById('file').addEventListener('change', function () {
+var blobSlice = File.prototype.slice || File.prototype.mozSlice || File.prototype.webkitSlice,
+    file = this.files[0],
+    chunkSize = 2097152,                             // Read in chunks of 2MB
+    chunks = Math.ceil(file.size / chunkSize),
+    currentChunk = 0,
+    spark = new SparkMD5.<span class="apidocCodeKeywordSpan">ArrayBuffer</span>(),
+    fileReader = new FileReader();
+
+fileReader.onload = function (e) {
+    console.log('read chunk nr', currentChunk + 1, 'of', chunks);
+    spark.append(e.target.result);                   // Append array buffer
+    currentChunk++;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.hash" id="apidoc.element.spark-md5.ArrayBuffer.hash">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.</span>hash
+        <span class="apidocSignatureSpan">(arr, raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hash = function (arr, raw) {
+    var hash = md51_array(new Uint8Array(arr)),
+        ret = hex(hash);
+
+    return raw ? hexToBinaryString(ret) : ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+## Usage
+
+### Normal usage
+
+```js
+var hexHash = SparkMD5.<span class="apidocCodeKeywordSpan">hash</span>('Hi there');        // hex hash
+var rawHash = SparkMD5.hash('Hi there', true);  // OR raw hash (binary string)
+```
+
+### Incremental usage
+
+```js
+var spark = new SparkMD5();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.ArrayBuffer.hash" id="apidoc.module.spark-md5.ArrayBuffer.hash">module spark-md5.ArrayBuffer.hash</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.hash.hash" id="apidoc.element.spark-md5.ArrayBuffer.hash.hash">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.</span>hash
+        <span class="apidocSignatureSpan">(arr, raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hash = function (arr, raw) {
+    var hash = md51_array(new Uint8Array(arr)),
+        ret = hex(hash);
+
+    return raw ? hexToBinaryString(ret) : ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+## Usage
+
+### Normal usage
+
+```js
+var hexHash = SparkMD5.<span class="apidocCodeKeywordSpan">hash</span>('Hi there');        // hex hash
+var rawHash = SparkMD5.hash('Hi there', true);  // OR raw hash (binary string)
+```
+
+### Incremental usage
+
+```js
+var spark = new SparkMD5();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype" id="apidoc.module.spark-md5.ArrayBuffer.prototype">module spark-md5.ArrayBuffer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype._finish" id="apidoc.element.spark-md5.ArrayBuffer.prototype._finish">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>_finish
+        <span class="apidocSignatureSpan">(tail, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_finish = function (tail, length) {
+    var i = length,
+        tmp,
+        lo,
+        hi;
+
+    tail[i &gt;&gt; 2] |= 0x80 &lt;&lt; ((i % 4) &lt;&lt; 3);
+    if (i &gt; 55) {
+        md5cycle(this._hash, tail);
+        for (i = 0; i &lt; 16; i += 1) {
+            tail[i] = 0;
+        }
+    }
+
+    // Do the final computation based on the tail and length
+    // Beware that the final length may not fit in 32 bits so we take care of that
+    tmp = this._length * 8;
+    tmp = tmp.toString(16).match(/(.*?)(.{0,8})$/);
+    lo = parseInt(tmp[2], 16);
+    hi = parseInt(tmp[1], 16) || 0;
+
+    tail[14] = lo;
+    tail[15] = hi;
+    md5cycle(this._hash, tail);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    tail = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    ret;
+
+for (i = 0; i &lt; length; i += 1) {
+    tail[i &gt;&gt; 2] |= buff.charCodeAt(i) &lt;&lt; ((i % 4) &lt;&lt; 3);
+}
+
+this.<span class="apidocCodeKeywordSpan">_finish</span>(tail, length);
+ret = hex(this._hash);
+
+if (raw) {
+    ret = hexToBinaryString(ret);
+}
+
+this.reset();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.append" id="apidoc.element.spark-md5.ArrayBuffer.prototype.append">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>append
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">append = function (arr) {
+    var buff = concatenateArrayBuffers(this._buff.buffer, arr, true),
+        length = buff.length,
+        i;
+
+    this._length += arr.byteLength;
+
+    for (i = 64; i &lt;= length; i += 64) {
+        md5cycle(this._hash, md5blk_array(buff.subarray(i - 64, i)));
+    }
+
+    this._buff = (i - 64) &lt; length ? new Uint8Array(buff.buffer.slice(i - 64)) : new Uint8Array(0);
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var rawHash = SparkMD5.hash('Hi there', true);  // OR raw hash (binary string)
+```
+
+### Incremental usage
+
+```js
+var spark = new SparkMD5();
+spark.<span class="apidocCodeKeywordSpan">append</span>('Hi');
+spark.append(' there');
+var hexHash = spark.end();                      // hex hash
+var rawHash = spark.end(true);                  // OR raw hash (binary string)
+```
+
+### Hash a file incrementally
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.destroy" id="apidoc.element.spark-md5.ArrayBuffer.prototype.destroy">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function () {
+    delete this._hash;
+    delete this._buff;
+    delete this._length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.end" id="apidoc.element.spark-md5.ArrayBuffer.prototype.end">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>end
+        <span class="apidocSignatureSpan">(raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (raw) {
+    var buff = this._buff,
+        length = buff.length,
+        tail = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        i,
+        ret;
+
+    for (i = 0; i &lt; length; i += 1) {
+        tail[i &gt;&gt; 2] |= buff[i] &lt;&lt; ((i % 4) &lt;&lt; 3);
+    }
+
+    this._finish(tail, length);
+    ret = hex(this._hash);
+
+    if (raw) {
+        ret = hexToBinaryString(ret);
+    }
+
+    this.reset();
+
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Incremental usage
+
+```js
+var spark = new SparkMD5();
+spark.append('Hi');
+spark.append(' there');
+var hexHash = spark.<span class="apidocCodeKeywordSpan">end</span>();                      // hex hash
+var rawHash = spark.end(true);                  // OR raw hash (binary string)
+```
+
+### Hash a file incrementally
+
+NOTE: If you test the code bellow using the file:// protocol in chrome you must start the browser with -allow-file-access-from-files
+ argument.
+Please see: http://code.google.com/p/chromium/issues/detail?id=60889
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.getState" id="apidoc.element.spark-md5.ArrayBuffer.prototype.getState">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>getState
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getState = function () {
+    var state = SparkMD5.prototype.getState.call(this);
+
+    // Convert buffer to a string
+    state.buff = arrayBuffer2Utf8Str(state.buff);
+
+    return state;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.reset" id="apidoc.element.spark-md5.ArrayBuffer.prototype.reset">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reset = function () {
+    this._buff = new Uint8Array(0);
+    this._length = 0;
+    this._hash = [1732584193, -271733879, -1732584194, 271733878];
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * Use this class to perform an incremental md5, otherwise use the
+ * static methods instead.
+ */
+
+function SparkMD5() {
+    // call reset to init the instance
+    this.<span class="apidocCodeKeywordSpan">reset</span>();
+}
+
+/**
+ * Appends a string.
+ * A conversion will be applied if an utf8 string is detected.
+ *
+ * @param {String} str The string to be appended
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.setState" id="apidoc.element.spark-md5.ArrayBuffer.prototype.setState">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>setState
+        <span class="apidocSignatureSpan">(state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setState = function (state) {
+    // Convert string to buffer
+    state.buff = utf8Str2ArrayBuffer(state.buff, true);
+
+    return SparkMD5.prototype.setState.call(this, state);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype._finish" id="apidoc.module.spark-md5.ArrayBuffer.prototype._finish">module spark-md5.ArrayBuffer.prototype._finish</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype._finish._finish" id="apidoc.element.spark-md5.ArrayBuffer.prototype._finish._finish">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>_finish
+        <span class="apidocSignatureSpan">(tail, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_finish = function (tail, length) {
+    var i = length,
+        tmp,
+        lo,
+        hi;
+
+    tail[i &gt;&gt; 2] |= 0x80 &lt;&lt; ((i % 4) &lt;&lt; 3);
+    if (i &gt; 55) {
+        md5cycle(this._hash, tail);
+        for (i = 0; i &lt; 16; i += 1) {
+            tail[i] = 0;
+        }
+    }
+
+    // Do the final computation based on the tail and length
+    // Beware that the final length may not fit in 32 bits so we take care of that
+    tmp = this._length * 8;
+    tmp = tmp.toString(16).match(/(.*?)(.{0,8})$/);
+    lo = parseInt(tmp[2], 16);
+    hi = parseInt(tmp[1], 16) || 0;
+
+    tail[14] = lo;
+    tail[15] = hi;
+    md5cycle(this._hash, tail);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    tail = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    ret;
+
+for (i = 0; i &lt; length; i += 1) {
+    tail[i &gt;&gt; 2] |= buff.charCodeAt(i) &lt;&lt; ((i % 4) &lt;&lt; 3);
+}
+
+this.<span class="apidocCodeKeywordSpan">_finish</span>(tail, length);
+ret = hex(this._hash);
+
+if (raw) {
+    ret = hexToBinaryString(ret);
+}
+
+this.reset();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype.append" id="apidoc.module.spark-md5.ArrayBuffer.prototype.append">module spark-md5.ArrayBuffer.prototype.append</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.append.append" id="apidoc.element.spark-md5.ArrayBuffer.prototype.append.append">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>append
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">append = function (arr) {
+    var buff = concatenateArrayBuffers(this._buff.buffer, arr, true),
+        length = buff.length,
+        i;
+
+    this._length += arr.byteLength;
+
+    for (i = 64; i &lt;= length; i += 64) {
+        md5cycle(this._hash, md5blk_array(buff.subarray(i - 64, i)));
+    }
+
+    this._buff = (i - 64) &lt; length ? new Uint8Array(buff.buffer.slice(i - 64)) : new Uint8Array(0);
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var rawHash = SparkMD5.hash('Hi there', true);  // OR raw hash (binary string)
+```
+
+### Incremental usage
+
+```js
+var spark = new SparkMD5();
+spark.<span class="apidocCodeKeywordSpan">append</span>('Hi');
+spark.append(' there');
+var hexHash = spark.end();                      // hex hash
+var rawHash = spark.end(true);                  // OR raw hash (binary string)
+```
+
+### Hash a file incrementally
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype.destroy" id="apidoc.module.spark-md5.ArrayBuffer.prototype.destroy">module spark-md5.ArrayBuffer.prototype.destroy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.destroy.destroy" id="apidoc.element.spark-md5.ArrayBuffer.prototype.destroy.destroy">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function () {
+    delete this._hash;
+    delete this._buff;
+    delete this._length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype.end" id="apidoc.module.spark-md5.ArrayBuffer.prototype.end">module spark-md5.ArrayBuffer.prototype.end</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.end.end" id="apidoc.element.spark-md5.ArrayBuffer.prototype.end.end">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>end
+        <span class="apidocSignatureSpan">(raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (raw) {
+    var buff = this._buff,
+        length = buff.length,
+        tail = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        i,
+        ret;
+
+    for (i = 0; i &lt; length; i += 1) {
+        tail[i &gt;&gt; 2] |= buff[i] &lt;&lt; ((i % 4) &lt;&lt; 3);
+    }
+
+    this._finish(tail, length);
+    ret = hex(this._hash);
+
+    if (raw) {
+        ret = hexToBinaryString(ret);
+    }
+
+    this.reset();
+
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Incremental usage
+
+```js
+var spark = new SparkMD5();
+spark.append('Hi');
+spark.append(' there');
+var hexHash = spark.<span class="apidocCodeKeywordSpan">end</span>();                      // hex hash
+var rawHash = spark.end(true);                  // OR raw hash (binary string)
+```
+
+### Hash a file incrementally
+
+NOTE: If you test the code bellow using the file:// protocol in chrome you must start the browser with -allow-file-access-from-files
+ argument.
+Please see: http://code.google.com/p/chromium/issues/detail?id=60889
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype.getState" id="apidoc.module.spark-md5.ArrayBuffer.prototype.getState">module spark-md5.ArrayBuffer.prototype.getState</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.getState.getState" id="apidoc.element.spark-md5.ArrayBuffer.prototype.getState.getState">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>getState
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getState = function () {
+    var state = SparkMD5.prototype.getState.call(this);
+
+    // Convert buffer to a string
+    state.buff = arrayBuffer2Utf8Str(state.buff);
+
+    return state;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype.reset" id="apidoc.module.spark-md5.ArrayBuffer.prototype.reset">module spark-md5.ArrayBuffer.prototype.reset</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.reset.reset" id="apidoc.element.spark-md5.ArrayBuffer.prototype.reset.reset">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reset = function () {
+    this._buff = new Uint8Array(0);
+    this._length = 0;
+    this._hash = [1732584193, -271733879, -1732584194, 271733878];
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * Use this class to perform an incremental md5, otherwise use the
+ * static methods instead.
+ */
+
+function SparkMD5() {
+    // call reset to init the instance
+    this.<span class="apidocCodeKeywordSpan">reset</span>();
+}
+
+/**
+ * Appends a string.
+ * A conversion will be applied if an utf8 string is detected.
+ *
+ * @param {String} str The string to be appended
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.ArrayBuffer.prototype.setState" id="apidoc.module.spark-md5.ArrayBuffer.prototype.setState">module spark-md5.ArrayBuffer.prototype.setState</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.ArrayBuffer.prototype.setState.setState" id="apidoc.element.spark-md5.ArrayBuffer.prototype.setState.setState">
+        function <span class="apidocSignatureSpan">spark-md5.ArrayBuffer.prototype.</span>setState
+        <span class="apidocSignatureSpan">(state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setState = function (state) {
+    // Convert string to buffer
+    state.buff = utf8Str2ArrayBuffer(state.buff, true);
+
+    return SparkMD5.prototype.setState.call(this, state);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.hash" id="apidoc.module.spark-md5.hash">module spark-md5.hash</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.hash.hash" id="apidoc.element.spark-md5.hash.hash">
+        function <span class="apidocSignatureSpan">spark-md5.</span>hash
+        <span class="apidocSignatureSpan">(str, raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hash = function (str, raw) {
+    // Converts the string to utf8 bytes if necessary
+    // Then compute it using the binary function
+    return SparkMD5.hashBinary(toUtf8(str), raw);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+## Usage
+
+### Normal usage
+
+```js
+var hexHash = SparkMD5.<span class="apidocCodeKeywordSpan">hash</span>('Hi there');        // hex hash
+var rawHash = SparkMD5.hash('Hi there', true);  // OR raw hash (binary string)
+```
+
+### Incremental usage
+
+```js
+var spark = new SparkMD5();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.hashBinary" id="apidoc.module.spark-md5.hashBinary">module spark-md5.hashBinary</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.hashBinary.hashBinary" id="apidoc.element.spark-md5.hashBinary.hashBinary">
+        function <span class="apidocSignatureSpan">spark-md5.</span>hashBinary
+        <span class="apidocSignatureSpan">(content, raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hashBinary = function (content, raw) {
+    var hash = md51(content),
+        ret = hex(hash);
+
+    return raw ? hexToBinaryString(ret) : ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#### SparkMD5.hash(str, raw)
+
+Hashes a string directly, returning the hex result.
+If `raw` is true, the result as a binary string will be returned instead.
+Note that this function is `static`.
+
+#### SparkMD5.<span class="apidocCodeKeywordSpan">hashBinary</span>(str, raw)
+
+Hashes a binary string directly (e.g.: string returned from the deprecated [readAsBinaryString](https://developer.mozilla.org/en
+-US/docs/Web/API/FileReader/readAsBinaryString)), returning the hex result.
+If `raw` is true, the result as a binary string will be returned instead.
+Note that this function is `static`.
+
+
+### SparkMD5.ArrayBuffer class
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spark-md5.toString" id="apidoc.module.spark-md5.toString">module spark-md5.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spark-md5.toString.toString" id="apidoc.element.spark-md5.toString.toString">
+        function <span class="apidocSignatureSpan">spark-md5.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    for (i = 0; i &lt; 16; i += 1) {
+        tail[i] = 0;
+    }
+}
+
+// Beware that the final length might not fit in 32 bits so we take care of that
+tmp = n * 8;
+tmp = tmp.<span class="apidocCodeKeywordSpan">toString</span>(16).match(/(.*?)(.{0,8})$/);
+lo = parseInt(tmp[2], 16);
+hi = parseInt(tmp[1], 16) || 0;
+
+tail[14] = lo;
+tail[15] = hi;
+
+md5cycle(state, tail);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
