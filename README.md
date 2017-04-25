@@ -1,6 +1,6 @@
 # npmdoc-spark-md5
 
-#### api documentation for  [spark-md5 (v3.0.0)](https://github.com/satazor/js-spark-md5#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-spark-md5.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-spark-md5) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-spark-md5.svg)](https://travis-ci.org/npmdoc/node-npmdoc-spark-md5)
+#### basic api documentation for  [spark-md5 (v3.0.0)](https://github.com/satazor/js-spark-md5#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-spark-md5.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-spark-md5) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-spark-md5.svg)](https://travis-ci.org/npmdoc/node-npmdoc-spark-md5)
 
 #### Lightning fast normal and incremental md5 for javascript
 
@@ -68,7 +68,8 @@
         "min": "uglifyjs spark-md5.js > spark-md5.min.js",
         "test": "open test/index.html"
     },
-    "version": "3.0.0"
+    "version": "3.0.0",
+    "bin": {}
 }
 ```
 
